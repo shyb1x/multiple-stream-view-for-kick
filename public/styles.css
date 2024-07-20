@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensure no scrollbars on the body */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+}
+
+.header input, .header button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.header button {
+    background-color: #61dafb;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.stream-list-container {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 220px;
+    height: calc(100% - 60px);
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    display: none;
+    z-index: 10;
+}
+
+.stream-list-container.visible {
+    display: block;
+}
+
+.stream-list {
+    padding: 10px;
+}
+
+.stream-item {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.stream-item .username {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.stream-item .group-select, .stream-item .remove-btn {
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.stream-item .group-select {
+    background-color: #282c34;
+    border: 1px solid #61dafb;
+    color: white;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.stream {
+    margin: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.stream iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.stream iframe::-webkit-scrollbar { /* For Chrome, Safari, and Opera */
+    display: none;
+}

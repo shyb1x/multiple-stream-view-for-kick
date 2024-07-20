@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Kick</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <input type="text" id="kick-username" placeholder="Enter Kick username" onkeypress="if(event.key === 'Enter') addStream()">
+        <button onclick="addStream()">+</button>
+        <button onclick="toggleStreamList()">Streams</button>
+    </div>
+    <div class="stream-list-container" id="stream-list-container">
+        <div class="stream-list" id="stream-list"></div>
+    </div>
+    <div class="container" id="streams-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
