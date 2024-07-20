@@ -77,4 +77,30 @@ body {
     cursor: pointer;
 }
 
-.remove-btn
+.remove-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.stream {
+    margin: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.stream iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.stream iframe::-webkit-scrollbar { /* For Chrome, Safari, and Opera */
+    display: none;
+}
